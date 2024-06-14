@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Endereco">
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/textView_geral"
+        android:gravity="center"
+        android:text="@string/msg_endereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCidades"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:completionThreshold="1"
+        android:hint="@string/label_cidade"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        tools:ignore="LabelFor" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoLogradouro"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/label_logradouro"
+        android:inputType="text"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCidades"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/edt_bairro"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/label_bairro"
+        android:inputType="text|textAutoComplete"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoLogradouro"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/edt_complemento"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/label_complemento"
+        android:inputType="text|textAutoComplete"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_bairro"
+        tools:ignore="Autofill" />
+
+
+    <Button
+        android:id="@+id/btn_avancar"
+        style="@style/btn_principal"
+        android:layout_marginTop="32dp"
+        android:text="@string/btn_avancar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_complemento" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

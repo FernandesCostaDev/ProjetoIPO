@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">ProjetoIPO</string>
+    <string name="menu_home">Home</string>
+    <string name="cad_usuario">Cadastro de usuários</string>
+    <string name="cad_viaturas">Cadastro de Viaturas</string>
+    <string name="exclusao">Exclusão</string>
+    <string name="titulo_app">INFORME PADRÃO DE OCORRÊNCIAS</string>
+    <string name="msg_teste">Mensagem de teste</string>
+    <string name="label_nome">Nome:</string>
+    <string name="btn_editar">Editar</string>
+    <string name="btn_preencher">Preencher formulário</string>
+    <string name="label_data">Data:</string>
+    <string name="label_horas">Horas:</string>
+    <string name="label_natureza">Natureza:</string>
+    <string name="label_SubNatureza">Sub natureza:</string>
+    <string name="del_usuario">Excluir Usuário</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="msg_select">Caso seu nome não esteja na lista abaixo, clique no menu acima e crie um cadastro.</string>
+    <string name="msg_exluir">Clique e segure para excluir um usuário</string>
+    <string name="msg_deletar">Deseja excluir este usuário?</string>
+    <string name="msg_deletarViatura">Deseja excluir esta viatura?</string>
+
+    <string name="msg_cabecalho_inclusao">Preencha os campos para adicionar um perfil</string>
+    <string name="msg_resumo">Resumo</string>
+    <string name="msg_iformacoesInicio"><u>Informações Iniciais</u></string>
+    <string name="msg_recursos"><u>Recursos utilizados</u></string>
+
+
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_adicionar">adicionar</string>
+
+    <string name="btn_excluir">Excluir</string>
+    <string name="btn_pdf">Gerar PDF</string>
+
+    <string name="btn_avancar">Avançar</string>
+
+    <string name="label_graduacao">Graduação:</string>
+    <string name="label_crbm">CRBM:</string>
+    <string name="label_obm">OBM:</string>
+    <string name="label_cidade">Cidade:</string>
+    <string name="label_logradouro">Logradouro:</string>
+    <string name="label_bairro">Bairro:</string>
+    <string name="label_cbAcionado">CB/PBC: Acionado</string>
+
+    <string name="label_CbAcionado">CB Acionado:</string>
+
+    <string name="calendar_description">Botão de calendário</string>
+    <string name="time_picker_description">Botão de relógio</string>
+    <string name="autoComplete_description">Campo de auto complete de nome</string>
+
+    <string name="crbm1">1º COMANDO REGIONAL DE BOMBEIRO MILITAR - CURITIBA</string>
+    <string name="crbm2">2º COMANDO REGIONAL DE BOMBEIRO MILITAR - LONDRINA</string>
+    <string name="crbm3">3º COMANDO REGIONAL DE BOMBEIRO MILITAR - CASCAVEL</string>
+    <string name="msg_endereco">Local do Evento</string>
+    <string name="label_complemento">Complemento:</string>
+    <string name="cadastro">Cadastro</string>
+
+    <string name="label_abtr">ABTR:</string>
+    <string name="label_aa">AA:</string>
+    <string name="label_abs">ABS:</string>
+    <string name="label_abt">ABT:</string>
+    <string name="label_vtrComplementar">Viatura complementar:</string>
+    <string name="label_selecaoVtr">Selecione a viatura abaixo ou clique e segure no ícone da lixeira para excluí-la.</string>
+    <string name="label_empenhar">Empenhar Viaturas</string>
+    <string name="label_selectVtr">Selecione as viaturas empenhadas:</string>
+    <string name="label_efetivoEmpenhado">Número de BMs empenhados:</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="msg_cadastrar">Caso a viatura não esteja na lista a cima, preencha os campos tipo e numeração para cadastrá-la.</string>
+    <string name="btn_empenhar">Empenhar</string>
+    <string name="label_tipologia">Tipo:</string>
+    <string name="label_sim">Sim</string>
+    <string name="label_nao">Não</string>
+    <string name="msg_apoio">Órgãos de Apoio</string>
+    <string name="label_apoio">Apoio:</string>
+    <string name="vtrs_empenhadas">Viaturas empenhadas:</string>
+    <string name="n_bms">nº de BMs:</string>
+
+</resources>

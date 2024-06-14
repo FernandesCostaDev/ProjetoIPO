@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.projetoipo.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_cadUsuario"
+        android:name="com.example.projetoipo.ui.cadUsuario.CadUsuario"
+        android:label="Cadastro Usuario"
+        tools:layout="@layout/fragment_cad_usuario" />
+
+    <fragment
+        android:id="@+id/nav_delUsuario"
+        android:name="com.example.projetoipo.ui.delUsuario.DelUsuario"
+        android:label="Excluir Usuário"
+        tools:layout="@layout/fragment_del_usuario"
+        />
+
+
+</navigation>

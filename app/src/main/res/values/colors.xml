@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#A60303</color>
+    <color name="cor_fonte">#6D6D6D</color>
+    <color name="cor_bg_fonte">#F2F2F2</color>
+    <color name="tom_azul1">#3E608C</color>
+    <color name="tom_azul2">#274073</color>
+    <color name="tom_azul3">#FFFFFF</color>
+    <color name="verde">#21BF65</color>
+</resources>
