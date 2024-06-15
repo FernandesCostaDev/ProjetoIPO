@@ -77,5 +77,6 @@
     <string name="label_apoio">Apoio:</string>
     <string name="vtrs_empenhadas">Viaturas empenhadas:</string>
     <string name="n_bms">nº de BMs:</string>
+    <string name="msg_vitimas">Dados das Vítimas</string>
 
 </resources>
