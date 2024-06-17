@@ -34,6 +34,7 @@ class Vitima : AppCompatActivity() {
         val retornoLogradouro = intent.getStringExtra("logradouro").toString()
         val retornoBairro = intent.getStringExtra("bairro").toString()
         val retornoComplemento = intent.getStringExtra("complemento").toString()
+
         val retornoCbAcionado = intent.getStringExtra("cbAcionado").toString()
         val retornoVtrEmpenhada = intent.getStringExtra("vtrEmpenhada").toString()
         val retornoEfetivo = intent.getStringExtra("efetivo").toString()
@@ -77,7 +78,7 @@ class Vitima : AppCompatActivity() {
             intent.putExtra("logradouro", retornoLogradouro)
             intent.putExtra("bairro", retornoBairro)
             intent.putExtra("complemento", retornoComplemento)
-            intent.putExtra("CbAcionado",retornoCbAcionado)
+            intent.putExtra("cbAcionado",retornoCbAcionado)
             intent.putExtra("vtrEmpenhada",retornoVtrEmpenhada)
             intent.putExtra("efetivo",retornoEfetivo)
 

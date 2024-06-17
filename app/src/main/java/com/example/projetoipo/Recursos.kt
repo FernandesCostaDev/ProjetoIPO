@@ -263,7 +263,6 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
         binding.edtEfetivo.addTextChangedListener(autoCompleteTextWatcher)
         binding.edtNumeracao.addTextChangedListener(autoCompleteTextWatcher)
 
-
         binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
             selectedOption = when (checkedId) {
                 R.id.radioButtonSim -> "Sim"
@@ -294,6 +293,8 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
                         intent.putExtra("cbAcionado", cbAcionado)
                         intent.putExtra("vtrEmpenhada", vtrEmpenhada)
                         intent.putExtra("efetivo", efetivo)
+
+
                         startActivity(intent)
                     }
                 }

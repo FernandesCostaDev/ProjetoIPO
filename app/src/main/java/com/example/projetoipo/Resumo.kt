@@ -53,7 +53,6 @@ class Resumo : AppCompatActivity() {
     private var retornoTotalVitimas = ""
     private var retornoObsVitimas = ""
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResumoBinding.inflate(layoutInflater)
@@ -109,6 +108,8 @@ class Resumo : AppCompatActivity() {
         val adapter = ResumoAdapter(itensResumo)
         binding.rvResumo.adapter = adapter
         binding.rvResumo.layoutManager = LinearLayoutManager(this)
+
+        Toast.makeText(this,"$retornoCbAcionado",Toast.LENGTH_LONG).show()
 
         binding.btnGerarPdf.setOnClickListener {
 
