@@ -43,7 +43,16 @@ class Resumo : AppCompatActivity() {
     private var retornoCbAcionado = ""
     private var retornoViaturas = ""
     private var retornoEfetivo = ""
-    private var comandoRegional: String = ""
+    private var comandoRegional = ""
+
+    private var retornoVitIlsea = ""
+    private var retornoVitCod1 = ""
+    private var retornoVitCod2 = ""
+    private var retornoVitCod3 = ""
+    private var retornoVitCod4 = ""
+    private var retornoTotalVitimas = ""
+    private var retornoObsVitimas = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +74,14 @@ class Resumo : AppCompatActivity() {
         retornoViaturas = intent.getStringExtra("vtrEmpenhada").toString()
         retornoEfetivo = intent.getStringExtra("efetivo").toString()
 
+        retornoVitIlsea = intent.getIntExtra("vitIlesa", 0).toString()
+        retornoVitCod1 = intent.getIntExtra("vitCod1", 0).toString()
+        retornoVitCod2 = intent.getIntExtra("vitCod2", 0).toString()
+        retornoVitCod3 = intent.getIntExtra("vitCod3", 0).toString()
+        retornoVitCod4 = intent.getIntExtra("vitCod4", 0).toString()
+        retornoTotalVitimas = intent.getIntExtra("totalVit", 0).toString()
+        retornoObsVitimas = intent.getStringExtra("observacaoVit").toString()
+
         val itensResumo = ItensResumo(
             retornoCrbm,
             retornoObm,
@@ -79,7 +96,14 @@ class Resumo : AppCompatActivity() {
             retornoComplemento,
             retornoCbAcionado,
             retornoViaturas,
-            retornoEfetivo
+            retornoEfetivo,
+            retornoVitIlsea,
+            retornoVitCod1,
+            retornoVitCod2,
+            retornoVitCod3,
+            retornoVitCod4,
+            retornoTotalVitimas,
+            retornoObsVitimas
         )
 
         val adapter = ResumoAdapter(itensResumo)
@@ -146,6 +170,14 @@ class Resumo : AppCompatActivity() {
                 val txtEfetivo: TextView = itemView.findViewById(R.id.num_bm)
                 val txtViaturas: TextView = itemView.findViewById(R.id.vtrEmpenhadas)
 
+                val txtVitIlsea: TextView = itemView.findViewById(R.id.txtIlesa)
+                val txtVitCod1: TextView = itemView.findViewById(R.id.txtCod1)
+                val txtVitCod2: TextView = itemView.findViewById(R.id.txtCod2)
+                val txtVitCod3: TextView = itemView.findViewById(R.id.txtCod3)
+                val txtVitCod4: TextView = itemView.findViewById(R.id.txtCod4)
+                val txtTtotalVitimas: TextView = itemView.findViewById(R.id.totalVitimas)
+                val txtObsVitimas: TextView = itemView.findViewById(R.id.txtObsVitimas)
+
                 txtCrbm.text = item.crbm
                 txtObm.text = item.obm
                 txtNome.text = item.nome
@@ -160,6 +192,14 @@ class Resumo : AppCompatActivity() {
                 txtCbAcionado.text = item.cbAcionado
                 txtEfetivo.text = item.efetivo
                 txtViaturas.text = item.viaturas
+
+                txtVitIlsea.text = item.vitIlesa
+                txtVitCod1.text = item.vitCod1
+                txtVitCod2.text = item.vitCod2
+                txtVitCod3.text = item.vitCod3
+                txtVitCod4.text = item.vitCod4
+                txtTtotalVitimas.text = item.totalVitimas
+                txtObsVitimas.text = item.obsVitimas
             }
         }
     }
@@ -239,6 +279,29 @@ class Resumo : AppCompatActivity() {
 
         canvas.drawText("Viaturas Empenhadas:", 40f, 350f, label3)
         canvas.drawText(retornoViaturas, 135f, 350f, label3)
+
+        canvas.drawText("Vítimas", 300f, 365f, label1)
+
+        canvas.drawText("Total de vítimas:", 40f, 380f, label3)
+        canvas.drawText(retornoTotalVitimas, 105f, 380f, label3)
+
+        canvas.drawText("Vítima ilesa:", 40f, 395f, label3)
+        canvas.drawText(retornoVitIlsea, 90f, 395f, label3)
+
+        canvas.drawText("código 1:", 115f, 395f, label3)
+        canvas.drawText(retornoVitCod1, 155f, 395f, label3)
+
+        canvas.drawText("código 2:", 180f, 395f, label3)
+        canvas.drawText(retornoVitCod2, 218f, 395f, label3)
+
+        canvas.drawText("código 3:", 245f, 395f, label3)
+        canvas.drawText(retornoVitCod3, 285f, 395f, label3)
+
+        canvas.drawText("código 4:", 310f, 395f, label3)
+        canvas.drawText(retornoVitCod4, 350f, 395f, label3)
+
+        canvas.drawText("Observações das vítimas:", 40f, 416f, label3)
+        canvas.drawText(retornoObsVitimas, 40f, 431f, label3)
 
         pdfDocument.finishPage(page)
         salvarPdf()

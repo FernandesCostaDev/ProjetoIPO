@@ -15,4 +15,13 @@ data class ItensResumo(
     val cbAcionado: String,
     val viaturas: String,
     val efetivo: String,
+
+    val vitIlesa: String,
+    val vitCod1: String,
+    val vitCod2: String,
+    val vitCod3: String,
+    val vitCod4: String,
+    val totalVitimas: String,
+    val obsVitimas: String,
+
 )

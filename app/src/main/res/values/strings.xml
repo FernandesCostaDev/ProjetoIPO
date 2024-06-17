@@ -78,5 +78,11 @@
     <string name="vtrs_empenhadas">Viaturas empenhadas:</string>
     <string name="n_bms">nº de BMs:</string>
     <string name="msg_vitimas">Dados das Vítimas</string>
+    <string name="totalVitimas">Total de vítimas:</string>
+    <string name="cod1">Cód 1:</string>
+    <string name="cod2">Cód 2:</string>
+    <string name="cod3">Cód 3:</string>
+    <string name="cod4">Cód 4:</string>
+    <string name="vitIlesa">Vitimas Ilesas:</string>
 
 </resources>

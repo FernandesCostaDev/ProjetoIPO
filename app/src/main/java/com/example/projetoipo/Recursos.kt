@@ -274,7 +274,7 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
             when (selectedOption) {
                 "Sim" -> {
                     binding.btnAvancar.setOnClickListener {
-                        val intent = Intent(this, Apoio::class.java)
+                        val intent = Intent(this, Vitima::class.java)
                         val cbAcionado = binding.autoCbAcionado.text.toString()
                         val vtrEmpenhada = binding.txtEmpenhoVtr.text.toString()
                         val efetivo = binding.edtEfetivo.text.toString()
