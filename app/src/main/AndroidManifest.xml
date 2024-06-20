@@ -23,7 +23,9 @@
         <activity
             android:name=".Descritivo"
             android:exported="false"
-            android:theme="@style/Theme.ProjetoIPO" />
+            android:theme="@style/Theme.ProjetoIPO">
+        </activity>
+
         <activity
             android:name=".Vitima"
             android:exported="false"
@@ -34,23 +36,24 @@
             android:name=".Resumo"
             android:exported="false"
             android:theme="@style/Theme.ProjetoIPO" >
-
         </activity>
+
         <activity
             android:name=".Recursos"
             android:exported="false"
             android:theme="@style/Theme.ProjetoIPO" >
-
-
         </activity>
+
         <activity
             android:name=".Endereco"
             android:exported="false"
             android:theme="@style/Theme.ProjetoIPO" />
+
         <activity
             android:name=".InfoInicial"
             android:exported="false"
             android:theme="@style/Theme.ProjetoIPO" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -61,7 +64,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

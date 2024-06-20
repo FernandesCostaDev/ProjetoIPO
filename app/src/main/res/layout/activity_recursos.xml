@@ -79,7 +79,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_fonte"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:hint="@string/label_efetivoEmpenhado"
+            android:text="@string/label_efetivoEmpenhado"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
@@ -168,6 +168,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="Houve vítimas?"
+            android:textSize="16sp"
+            android:textColor="@color/cor_fonte"
             app:layout_constraintBottom_toTopOf="@+id/radioGroup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -188,12 +190,16 @@
                 android:id="@+id/radioButtonSim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp"
                 android:text="@string/label_sim" />
 
             <RadioButton
                 android:id="@+id/radioButtonNao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp"
                 android:text="@string/label_nao" />
 
         </RadioGroup>

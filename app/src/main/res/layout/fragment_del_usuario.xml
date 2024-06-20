@@ -11,6 +11,7 @@
         android:id="@+id/textView1"
         style="@style/textView_geral"
         android:text="@string/msg_exluir"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

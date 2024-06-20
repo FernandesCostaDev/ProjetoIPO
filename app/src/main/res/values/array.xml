@@ -8,6 +8,7 @@
         <item>2º Sgt. QPBM</item>
         <item>1º Sgt. QPBM</item>
         <item>Subten. QPBM</item>
+        <item>1º Tenente QOBM</item>
     </string-array>
 
     <string-array name="crbm">
@@ -925,7 +926,5 @@
         <item>ABS:</item>
         <item>ABT:</item>
     </string-array>
-
-
 
 </resources>

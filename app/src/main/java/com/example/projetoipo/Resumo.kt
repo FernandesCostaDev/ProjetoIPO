@@ -3,17 +3,24 @@ package com.example.projetoipo
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.graphics.pdf.PdfDocument
+import android.graphics.text.LineBreaker
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.Layout
+import android.text.StaticLayout
+import android.text.TextPaint
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.collection.lruCache
 import androidx.core.content.contentValuesOf
+import androidx.core.graphics.withTranslation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoipo.databinding.ActivityResumoBinding
@@ -244,6 +251,13 @@ class Resumo : AppCompatActivity() {
         canvas.drawText("Responsável pela informação:", 40f, 155f, label3)
         canvas.drawText(retornoGraduacaoNome, 162f, 155f, label3)
 
+        val label4 = Paint()
+        label4.textSize = fontSize.toFloat()
+
+        label1.typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
+        canvas.drawText(comandoRegional, 300f, 90f, label1)
+        canvas.drawText(retornoObm, 300f, 105f, label1)
+
         canvas.drawText("Data:", 40f, 170f, label3)
         canvas.drawText(retornoData, 64f, 170f, label3)
 
@@ -301,8 +315,12 @@ class Resumo : AppCompatActivity() {
         canvas.drawText("código 4:", 310f, 395f, label3)
         canvas.drawText(retornoVitCod4, 350f, 395f, label3)
 
-        canvas.drawText("Observações das vítimas:", 40f, 416f, label3)
-        canvas.drawText(retornoObsVitimas, 40f, 431f, label3)
+        canvas.drawText("Observações das vítimas:", 40f, 416f, label4)
+
+        val textPaint = TextPaint()
+        textPaint.textSize = fontSize.toFloat()
+
+        canvas.drawMultiLineText("$retornoObsVitimas", textPaint, 510, 40F, 425F, 0)
 
         pdfDocument.finishPage(page)
         salvarPdf()
@@ -341,5 +359,48 @@ class Resumo : AppCompatActivity() {
             }
         }
         pdfDocument.close()
+    }
+    private fun Canvas.drawMultiLineText(
+        texto: String,
+        textPaint: TextPaint,
+        largura: Int,
+        x: Float,
+        y: Float,
+        inicio: Int = 0,
+        fim: Int = texto.length,
+        alinhamento: Layout.Alignment = Layout.Alignment.ALIGN_NORMAL,
+        justificaMode: Int = LineBreaker.JUSTIFICATION_MODE_INTER_WORD
+    ) {
+        val cacheKey = "$texto-$inicio-$fim-$textPaint-$largura-$alinhamento-$justificaMode"
+        val staticLayout = StaticLayoutCache[cacheKey] ?: StaticLayout.Builder.obtain(
+            texto,
+            inicio,
+            fim,
+            textPaint,
+            largura
+        )
+            .setAlignment(alinhamento)
+            .setJustificationMode(justificaMode)
+            .build().apply { StaticLayoutCache[cacheKey] = this }
+        staticLayout.draw(this, x, y)
+    }
+}
+
+private fun StaticLayout.draw(canvas: Canvas, x: Float, y: Float) {
+    canvas.withTranslation(x, y) {
+        draw(this)
+    }
+}
+
+private object StaticLayoutCache {
+    private const val MAX_SIZE = 50 // Arbitrary max number of cached items
+
+    private val cache = lruCache<String, StaticLayout>(MAX_SIZE)
+    operator fun set(key: String, staticLayout: StaticLayout) {
+        cache.put(key, staticLayout)
+    }
+
+    operator fun get(key: String): StaticLayout? {
+        return cache[key]
     }
 }

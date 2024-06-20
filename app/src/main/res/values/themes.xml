@@ -8,7 +8,7 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/tom_azul1</item>
         <item name="colorSecondaryVariant">@color/tom_azul1</item>
-        <item name="colorOnSecondary">@color/cor_bg_fonte</item>
+        <item name="colorOnSecondary">@color/cor_bg</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">#484848</item>
         <!-- Customize your theme here. -->
@@ -22,8 +22,6 @@
     <style name="Theme.ProjetoIPO.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ProjetoIPO.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-
 
     <style name="Theme.AppCompat.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/tom_azul2</item>
