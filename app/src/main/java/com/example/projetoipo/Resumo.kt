@@ -13,18 +13,12 @@ import android.provider.MediaStore
 import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.collection.lruCache
 import androidx.core.content.contentValuesOf
 import androidx.core.graphics.withTranslation
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoipo.databinding.ActivityResumoBinding
-import com.example.projetoipo.model.ItensResumo
 import java.io.IOException
 import java.io.OutputStream
 import java.text.SimpleDateFormat
@@ -51,7 +45,6 @@ class Resumo : AppCompatActivity() {
     private var retornoViaturas = ""
     private var retornoEfetivo = ""
     private var comandoRegional = ""
-
     private var retornoVitIlsea = ""
     private var retornoVitCod1 = ""
     private var retornoVitCod2 = ""
@@ -59,6 +52,8 @@ class Resumo : AppCompatActivity() {
     private var retornoVitCod4 = ""
     private var retornoTotalVitimas = ""
     private var retornoObsVitimas = ""
+
+    private var retornoMeioAmbiente: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,35 +83,30 @@ class Resumo : AppCompatActivity() {
         retornoTotalVitimas = intent.getIntExtra("totalVit", 0).toString()
         retornoObsVitimas = intent.getStringExtra("observacaoVit").toString()
 
-        val itensResumo = ItensResumo(
-            retornoCrbm,
-            retornoObm,
-            retornoGraduacaoNome,
-            retornoData,
-            retronoHora,
-            retornoNatureza,
-            retornoSubNatureza,
-            retornoCidade,
-            retornoLogradouro,
-            retornoBairro,
-            retornoComplemento,
-            retornoCbAcionado,
-            retornoViaturas,
-            retornoEfetivo,
-            retornoVitIlsea,
-            retornoVitCod1,
-            retornoVitCod2,
-            retornoVitCod3,
-            retornoVitCod4,
-            retornoTotalVitimas,
-            retornoObsVitimas
-        )
+        retornoMeioAmbiente = intent?.extras?.getString("meioAmbiente")?.takeIf { it.isNotBlank() }
+            ?: "Não Informado."
 
-        val adapter = ResumoAdapter(itensResumo)
-        binding.rvResumo.adapter = adapter
-        binding.rvResumo.layoutManager = LinearLayoutManager(this)
-
-        Toast.makeText(this,"$retornoCbAcionado",Toast.LENGTH_LONG).show()
+        binding.txtCrbm.text = retornoCrbm
+        binding.txtObm.text = retornoObm
+        binding.txtNome.text = retornoGraduacaoNome
+        binding.txtData.text = retornoData
+        binding.txtHora.text = retronoHora
+        binding.txtNatureza.text = retornoNatureza
+        binding.txtSubNatureza.text = retornoSubNatureza
+        binding.txtCidade.text = retornoCidade
+        binding.txtLogradouro.text = retornoLogradouro
+        binding.txtBairro.text = retornoBairro
+        binding.txtComplemento.text = retornoComplemento
+        binding.txtCbAcionado.text = retornoCbAcionado
+        binding.vtrEmpenhadas.text = retornoViaturas
+        binding.numBm.text = retornoEfetivo
+        binding.txtCod1.text = retornoVitCod1
+        binding.txtCod2.text = retornoVitCod2
+        binding.txtCod3.text = retornoVitCod3
+        binding.txtCod4.text = retornoVitCod4
+        binding.totalVitimas.text = retornoTotalVitimas
+        binding.txtObsVitimas.text = retornoObsVitimas
+        binding.txtMeioAmbiente.text = retornoMeioAmbiente
 
         binding.btnGerarPdf.setOnClickListener {
 
@@ -136,82 +126,7 @@ class Resumo : AppCompatActivity() {
             gerarPdf()
             finish()
         }
-
     }
-
-    //Classe que administra a recyclerview e suas células(os seus layouts)
-    private inner class ResumoAdapter(private val itensResumo: ItensResumo) :
-        RecyclerView.Adapter<ResumoAdapter.ResumoViewHolder>() {
-        //Qual é o layout da célula(item)
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResumoViewHolder {
-            val view = layoutInflater.inflate(R.layout.item_resumo, parent, false)
-            val viewHolder = ResumoViewHolder(view)
-            return viewHolder
-        }
-
-        //Quantas celulas irão aparecer na rolagem
-        override fun getItemCount(): Int {
-            return 1
-        }
-
-        //Responsável por informar quantas celulas essa listagem terá
-        override fun onBindViewHolder(holder: ResumoViewHolder, position: Int) {
-            val itemCurrent = itensResumo
-            holder.bind(itemCurrent)
-        }
-
-        //Classe da célula
-        private inner class ResumoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            fun bind(item: ItensResumo) {
-                val txtCrbm: TextView = itemView.findViewById(R.id.txt_crbm)
-                val txtObm: TextView = itemView.findViewById(R.id.txt_obm)
-                val txtNome: TextView = itemView.findViewById(R.id.txt_nome)
-                val txtData: TextView = itemView.findViewById(R.id.txt_data)
-                val txtHora: TextView = itemView.findViewById(R.id.txt_hora)
-                val txtNatureza: TextView = itemView.findViewById(R.id.txt_natureza)
-                val txtSubNatureza: TextView = itemView.findViewById(R.id.txt_subNatureza)
-                val txtCidade: TextView = itemView.findViewById(R.id.txt_cidade)
-                val txtLogradouro: TextView = itemView.findViewById(R.id.txt_logradouro)
-                val txtBairro: TextView = itemView.findViewById(R.id.txt_bairro)
-                val txtComplemento: TextView = itemView.findViewById(R.id.txt_complemento)
-                val txtCbAcionado: TextView = itemView.findViewById(R.id.txt_cbAcionado)
-                val txtEfetivo: TextView = itemView.findViewById(R.id.num_bm)
-                val txtViaturas: TextView = itemView.findViewById(R.id.vtrEmpenhadas)
-
-                val txtVitIlsea: TextView = itemView.findViewById(R.id.txtIlesa)
-                val txtVitCod1: TextView = itemView.findViewById(R.id.txtCod1)
-                val txtVitCod2: TextView = itemView.findViewById(R.id.txtCod2)
-                val txtVitCod3: TextView = itemView.findViewById(R.id.txtCod3)
-                val txtVitCod4: TextView = itemView.findViewById(R.id.txtCod4)
-                val txtTtotalVitimas: TextView = itemView.findViewById(R.id.totalVitimas)
-                val txtObsVitimas: TextView = itemView.findViewById(R.id.txtObsVitimas)
-
-                txtCrbm.text = item.crbm
-                txtObm.text = item.obm
-                txtNome.text = item.nome
-                txtData.text = item.data
-                txtHora.text = item.hora
-                txtNatureza.text = item.natureza
-                txtSubNatureza.text = item.subNatureza
-                txtCidade.text = item.cidade
-                txtLogradouro.text = item.logradouro
-                txtBairro.text = item.bairro
-                txtComplemento.text = item.complemento
-                txtCbAcionado.text = item.cbAcionado
-                txtEfetivo.text = item.efetivo
-                txtViaturas.text = item.viaturas
-
-                txtVitIlsea.text = item.vitIlesa
-                txtVitCod1.text = item.vitCod1
-                txtVitCod2.text = item.vitCod2
-                txtVitCod3.text = item.vitCod3
-                txtVitCod4.text = item.vitCod4
-                txtTtotalVitimas.text = item.totalVitimas
-                txtObsVitimas.text = item.obsVitimas
-            }
-        }
-    }
-
     private fun gerarPdf() {
 
         val pageWidth = 595
@@ -319,8 +234,10 @@ class Resumo : AppCompatActivity() {
 
         val textPaint = TextPaint()
         textPaint.textSize = fontSize.toFloat()
-
         canvas.drawMultiLineText("$retornoObsVitimas", textPaint, 510, 40F, 425F, 0)
+
+        canvas.drawText("Danos ao meio ambiente", 300f, 470f, label1)
+        canvas.drawMultiLineText(retornoMeioAmbiente, textPaint, 510, 40F, 480F, 0)
 
         pdfDocument.finishPage(page)
         salvarPdf()

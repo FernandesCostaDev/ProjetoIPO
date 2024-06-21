@@ -18,13 +18,13 @@
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:text="@string/msg_contexto"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout5"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout5"
+            android:id="@+id/textInputLayout1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -38,10 +38,61 @@
             app:layout_constraintTop_toBottomOf="@+id/textView1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDanosMeioAmbiente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
                 android:hint="Danos ao Meio Ambiente:"
+                android:inputType="textMultiLine"
+                android:maxLength="401"
+                android:minHeight="150dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="400"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDanosPropriedade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Danos à Propriedade:"
+                android:inputType="textMultiLine"
+                android:maxLength="401"
+                android:minHeight="150dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="400"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCenario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Cenário:"
                 android:inputType="textMultiLine"
                 android:maxLength="401"
                 android:minHeight="150dp" />
@@ -59,57 +110,10 @@
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
-                android:hint="Danos à Propriedade:"
-                android:inputType="textMultiLine"
-                android:maxLength="401"
-                android:minHeight="150dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="400"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
-                android:hint="Cenário:"
-                android:inputType="textMultiLine"
-                android:maxLength="401"
-                android:minHeight="150dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="400"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
-
-            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDesdobramento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
@@ -128,7 +132,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

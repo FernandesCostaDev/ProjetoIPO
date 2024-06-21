@@ -23,5 +23,5 @@ data class ItensResumo(
     val vitCod4: String,
     val totalVitimas: String,
     val obsVitimas: String,
-
+    val meioAmbiente: String,
 )

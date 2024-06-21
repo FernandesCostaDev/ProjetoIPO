@@ -303,10 +303,11 @@
 
     <TextView
         android:id="@+id/txtObsVitimas"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="@color/cor_fonte"
+        android:padding="8dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="2dp"
@@ -314,6 +315,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView20"
+        style="@style/textView2_resumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Danos ao Meio Ambiente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtObsVitimas" />
+
+    <TextView
+        android:id="@+id/txtMeioAmbiente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/perfil_input"
+        android:textColor="@color/cor_fonte"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
 
 
