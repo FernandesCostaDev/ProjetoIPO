@@ -22,33 +22,29 @@
 
         <activity
             android:name=".Descritivo"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.ProjetoIPO">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
 
         <activity
             android:name=".Vitima"
             android:exported="false"
             android:theme="@style/Theme.ProjetoIPO" >
+
+
         </activity>
 
         <activity
             android:name=".Resumo"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.ProjetoIPO" >
         </activity>
 
         <activity
             android:name=".Recursos"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.ProjetoIPO" >
+
         </activity>
 
         <activity
@@ -66,8 +62,11 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Starting">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
-
 </manifest>

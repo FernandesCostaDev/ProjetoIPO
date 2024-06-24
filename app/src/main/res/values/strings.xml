@@ -85,5 +85,6 @@
     <string name="cod4">Cód 4:</string>
     <string name="vitIlesa">Vitimas Ilesas:</string>
     <string name="msg_contexto">Contextualização</string>
+    <string name="msg_adicionarApoio">Deseja adicionar um orgão de apoio?</string>
 
 </resources>

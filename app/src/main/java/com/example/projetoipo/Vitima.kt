@@ -34,7 +34,6 @@ class Vitima : AppCompatActivity() {
         val retornoLogradouro = intent.getStringExtra("logradouro").toString()
         val retornoBairro = intent.getStringExtra("bairro").toString()
         val retornoComplemento = intent.getStringExtra("complemento").toString()
-
         val retornoCbAcionado = intent.getStringExtra("cbAcionado").toString()
         val retornoVtrEmpenhada = intent.getStringExtra("vtrEmpenhada").toString()
         val retornoEfetivo = intent.getStringExtra("efetivo").toString()
@@ -65,7 +64,7 @@ class Vitima : AppCompatActivity() {
            totalVit = binding.txtTotalVitima.text.toString().toIntOrNull() ?: 0
            observacaoVit = binding.editObsVitima.text.toString()
 
-            intent = Intent(this,Resumo::class.java)
+            intent = Intent(this,Descritivo::class.java)
 
             intent.putExtra("graduacaoNome", retornoGraduacaoNome)
             intent.putExtra("crbm", retornoCrbm)
@@ -88,7 +87,6 @@ class Vitima : AppCompatActivity() {
             intent.putExtra("vitCod3", vitCod3)
             intent.putExtra("vitCod4", vitCod4)
             intent.putExtra("totalVit", totalVit)
-
             intent.putExtra("observacaoVit", observacaoVit)
 
             startActivity(intent)

@@ -289,12 +289,9 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
                         intent.putExtra("logradouro", retornoLogradouro)
                         intent.putExtra("bairro", retornoBairro)
                         intent.putExtra("complemento", retornoComplemento)
-
                         intent.putExtra("cbAcionado", cbAcionado)
                         intent.putExtra("vtrEmpenhada", vtrEmpenhada)
                         intent.putExtra("efetivo", efetivo)
-
-
                         startActivity(intent)
                     }
                 }
@@ -317,10 +314,10 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
                         intent.putExtra("logradouro", retornoLogradouro)
                         intent.putExtra("bairro", retornoBairro)
                         intent.putExtra("complemento", retornoComplemento)
-
                         intent.putExtra("cbAcionado", cbAcionado)
                         intent.putExtra("vtrEmpenhada", vtrEmpenhada)
                         intent.putExtra("efetivo", efetivo)
+
                         startActivity(intent)
                     }
                 }
@@ -373,19 +370,3 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
             .show()
     }
 }
-
-//  private lateinit var fab: FloatingActionButton
-
-// binding.edtEfetivo.requestFocus()
-/*
-fab = binding.btnEmpenhoVtr
-fab.isEnabled = false
-adicionar fab na frente do this
-*/
-
-/*
-binding.btnEmpenhoVtr.setOnClickListener {
-val selectedItems = adapter.getSelectedItems()
-val selectedText = selectedItems.joinToString(", ") { it.prefixo }
-binding.txtEmpenhoVtr.text = selectedText
-}*/

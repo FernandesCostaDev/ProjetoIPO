@@ -45,15 +45,20 @@ class Resumo : AppCompatActivity() {
     private var retornoViaturas = ""
     private var retornoEfetivo = ""
     private var comandoRegional = ""
-    private var retornoVitIlsea = ""
-    private var retornoVitCod1 = ""
-    private var retornoVitCod2 = ""
-    private var retornoVitCod3 = ""
-    private var retornoVitCod4 = ""
-    private var retornoTotalVitimas = ""
+
+    private var retornoVitIlsea: Int = 0
+    private var retornoVitCod1: Int = 0
+    private var retornoVitCod2: Int = 0
+    private var retornoVitCod3: Int = 0
+    private var retornoVitCod4: Int = 0
+    private var retornoTotalVitimas: Int = 0
     private var retornoObsVitimas = ""
 
-    private var retornoMeioAmbiente: String = ""
+    private var retornoMeioAmbiente = ""
+    private var retornoDanosPropriedade = ""
+    private var retornoCenario = ""
+    private var retornoDesdobramento = ""
+    private var retornoApoio = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,16 +80,27 @@ class Resumo : AppCompatActivity() {
         retornoViaturas = intent.getStringExtra("vtrEmpenhada").toString()
         retornoEfetivo = intent.getStringExtra("efetivo").toString()
 
-        retornoVitIlsea = intent.getIntExtra("vitIlesa", 0).toString()
-        retornoVitCod1 = intent.getIntExtra("vitCod1", 0).toString()
-        retornoVitCod2 = intent.getIntExtra("vitCod2", 0).toString()
-        retornoVitCod3 = intent.getIntExtra("vitCod3", 0).toString()
-        retornoVitCod4 = intent.getIntExtra("vitCod4", 0).toString()
-        retornoTotalVitimas = intent.getIntExtra("totalVit", 0).toString()
-        retornoObsVitimas = intent.getStringExtra("observacaoVit").toString()
+        retornoVitIlsea = intent.getIntExtra("vitIlesa", 0)
+        retornoVitCod1 = intent.getIntExtra("vitCod1", 0)
+        retornoVitCod2 = intent.getIntExtra("vitCod2", 0)
+        retornoVitCod3 = intent.getIntExtra("vitCod3",0)
+        retornoVitCod4 = intent.getIntExtra("vitCod4", 0)
+        retornoTotalVitimas = intent.getIntExtra("totalVit",0)
+        retornoObsVitimas = intent.getStringExtra("obsservacaoVit").toString()
 
         retornoMeioAmbiente = intent?.extras?.getString("meioAmbiente")?.takeIf { it.isNotBlank() }
-            ?: "Não Informado."
+            ?: "Não houve | Não se aplica."
+        retornoDanosPropriedade =
+            intent?.extras?.getString("danosPropriedade")?.takeIf { it.isNotBlank() }
+                ?: "Não houve | Não se aplica."
+        retornoCenario =
+            intent?.extras?.getString("cenario")?.takeIf { it.isNotBlank() } ?: "Não apurado."
+        retornoDesdobramento =
+            intent?.extras?.getString("desdobramento")?.takeIf { it.isNotBlank() }
+                ?: "Não Informado."
+        retornoApoio =
+            intent?.extras?.getString("selecaoApoio")?.takeIf { it.isNotBlank() }
+                ?: "Não houve."
 
         binding.txtCrbm.text = retornoCrbm
         binding.txtObm.text = retornoObm
@@ -100,13 +116,20 @@ class Resumo : AppCompatActivity() {
         binding.txtCbAcionado.text = retornoCbAcionado
         binding.vtrEmpenhadas.text = retornoViaturas
         binding.numBm.text = retornoEfetivo
-        binding.txtCod1.text = retornoVitCod1
-        binding.txtCod2.text = retornoVitCod2
-        binding.txtCod3.text = retornoVitCod3
-        binding.txtCod4.text = retornoVitCod4
-        binding.totalVitimas.text = retornoTotalVitimas
+
+        binding.txtIlesa.text = retornoVitIlsea.toString()
+        binding.txtCod1.text = retornoVitCod1.toString()
+        binding.txtCod2.text = retornoVitCod2.toString()
+        binding.txtCod3.text = retornoVitCod3.toString()
+        binding.txtCod4.text = retornoVitCod4.toString()
+        binding.totalVitimas.text = retornoTotalVitimas.toString()
         binding.txtObsVitimas.text = retornoObsVitimas
+
         binding.txtMeioAmbiente.text = retornoMeioAmbiente
+        binding.txtDanosPropriedade.text = retornoDanosPropriedade
+        binding.txtCenario.text = retornoCenario
+        binding.txtDesdobramento.text = retornoDesdobramento
+        binding.txtApoio.text = retornoApoio
 
         binding.btnGerarPdf.setOnClickListener {
 
@@ -213,31 +236,43 @@ class Resumo : AppCompatActivity() {
         canvas.drawText("Vítimas", 300f, 365f, label1)
 
         canvas.drawText("Total de vítimas:", 40f, 380f, label3)
-        canvas.drawText(retornoTotalVitimas, 105f, 380f, label3)
+        canvas.drawText(retornoTotalVitimas.toString(), 105f, 380f, label3)
 
         canvas.drawText("Vítima ilesa:", 40f, 395f, label3)
-        canvas.drawText(retornoVitIlsea, 90f, 395f, label3)
+        canvas.drawText(retornoVitIlsea.toString(), 90f, 395f, label3)
 
         canvas.drawText("código 1:", 115f, 395f, label3)
-        canvas.drawText(retornoVitCod1, 155f, 395f, label3)
+        canvas.drawText(retornoVitCod1.toString(), 155f, 395f, label3)
 
         canvas.drawText("código 2:", 180f, 395f, label3)
-        canvas.drawText(retornoVitCod2, 218f, 395f, label3)
+        canvas.drawText(retornoVitCod2.toString(), 218f, 395f, label3)
 
         canvas.drawText("código 3:", 245f, 395f, label3)
-        canvas.drawText(retornoVitCod3, 285f, 395f, label3)
+        canvas.drawText(retornoVitCod3.toString(), 285f, 395f, label3)
 
         canvas.drawText("código 4:", 310f, 395f, label3)
-        canvas.drawText(retornoVitCod4, 350f, 395f, label3)
+        canvas.drawText(retornoVitCod4.toString(), 350f, 395f, label3)
 
         canvas.drawText("Observações das vítimas:", 40f, 416f, label4)
 
         val textPaint = TextPaint()
         textPaint.textSize = fontSize.toFloat()
-        canvas.drawMultiLineText("$retornoObsVitimas", textPaint, 510, 40F, 425F, 0)
+        canvas.drawMultiLineText("$retornoObsVitimas", textPaint, 510, 40F, 420F, 0)
 
         canvas.drawText("Danos ao meio ambiente", 300f, 470f, label1)
-        canvas.drawMultiLineText(retornoMeioAmbiente, textPaint, 510, 40F, 480F, 0)
+        canvas.drawMultiLineText(retornoMeioAmbiente, textPaint, 510, 40F, 475F, 0)
+
+        canvas.drawText("Danos à propriedade", 300f, 535f, label1)
+        canvas.drawMultiLineText(retornoDanosPropriedade, textPaint, 510, 40F, 540F, 0)
+
+        canvas.drawText("Cenário", 300f, 595f, label1)
+        canvas.drawMultiLineText(retornoCenario, textPaint, 510, 40F, 600F, 0)
+
+        canvas.drawText("Desdobramento", 300f, 655f, label1)
+        canvas.drawMultiLineText(retornoDesdobramento, textPaint, 510, 40F, 660F, 0)
+
+        canvas.drawText("Apoio", 300f, 780f, label1)
+        canvas.drawMultiLineText(retornoApoio, textPaint, 510, 40F, 785F, 0)
 
         pdfDocument.finishPage(page)
         salvarPdf()
@@ -302,6 +337,8 @@ class Resumo : AppCompatActivity() {
         staticLayout.draw(this, x, y)
     }
 }
+
+
 
 private fun StaticLayout.draw(canvas: Canvas, x: Float, y: Float) {
     canvas.withTranslation(x, y) {

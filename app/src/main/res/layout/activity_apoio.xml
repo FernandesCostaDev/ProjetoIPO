@@ -10,47 +10,377 @@
     <TextView
         android:id="@+id/textView1"
         style="@style/textView_geral"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:layout_marginTop="8dp"
         android:text="@string/msg_apoio"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/perfil_input"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        tools:listitem="@layout/item_apoio" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <CheckBox
+                android:id="@+id/ckBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Aeronáutica"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Bombeiro Privado"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="CIA de Água e Esgoto"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="BPMOA/PMPR"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="CIA de Energia Elétrica"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="CB de Outro Estado"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Defesa Civil (Casa Militar)"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Defesa Civil (COMPDEC)"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Concessionária da Rodovia"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Concessionária da Rodovia"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="CREA"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="DER/DNIT"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+
+            <CheckBox
+                android:id="@+id/ckBox13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Exército"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Fiscalização de Trânsito Municipal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Guarda Municipal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Guarda Portuária"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="IAP"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="IBAMA"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="IML"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Instituição Privada"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Instituição Pública"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Marinha"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="PMPR"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Científica Paraná"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Civil"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+
+            <CheckBox
+                android:id="@+id/ckBox26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Federal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+
+            <CheckBox
+                android:id="@+id/ckBox27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Florestal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Militar de Outro Estado"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Rodoviária Federal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Receita Estadual"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Vigilância Sanitária Municipal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Vigilância Sanitária Estadual"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Polícia Rodoviária Estadual"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Prefeitura Municipal"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/ckBox35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="SAMU"
+                android:textColor="@color/cor_fonte"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView2"
         style="@style/textView2_resumo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/label_apoio"
+        app:layout_constraintBottom_toTopOf="@+id/txt_apoio"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
 
     <TextView
         android:id="@+id/txt_apoio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
         android:textColor="@color/cor_fonte"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_avancar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_avancar"
