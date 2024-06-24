@@ -47,11 +47,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/linearLayout1">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -61,15 +57,9 @@
                 <TextView
                     android:id="@+id/txt_nome"
                     style="@style/textView2_resumo"/>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/TextView3"
                     style="@style/textView2_resumo"
@@ -80,12 +70,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/TextView4"
                     style="@style/textView2_resumo"
@@ -96,12 +81,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/TextView5"
                     style="@style/textView2_resumo"
@@ -112,12 +92,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView6"
                     style="@style/textView2_resumo"
@@ -128,12 +103,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout2">
                 <TextView
                     android:id="@+id/textView7"
                     style="@style/textView2_resumo"
@@ -144,12 +114,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView8"
                     style="@style/textView2_resumo"
@@ -160,12 +125,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView9"
                     style="@style/textView2_resumo"
@@ -176,12 +136,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView10"
                     style="@style/textView2_resumo"
@@ -192,12 +147,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout2">
                 <TextView
                     android:id="@+id/textView11"
                     style="@style/textView2_resumo"
@@ -208,12 +158,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView12"
                     style="@style/textView2_resumo"
@@ -224,12 +169,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView13"
                     style="@style/textView2_resumo"
@@ -240,14 +180,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout2">
                 <TextView
                     android:id="@+id/textView15"
                     style="@style/textView2_resumo"
@@ -258,12 +191,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView16"
                     style="@style/textView2_resumo"
@@ -274,12 +202,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView17"
                     style="@style/textView2_resumo"
@@ -290,12 +213,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView18"
                     style="@style/textView2_resumo"
@@ -306,12 +224,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView19"
                     style="@style/textView2_resumo"
@@ -322,12 +235,7 @@
                     style="@style/textView2_resumo" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
+            <LinearLayout style="@style/linearLayout1">
                 <TextView
                     android:id="@+id/textView14"
                     style="@style/textView2_resumo"
@@ -346,15 +254,7 @@
 
             <TextView
                 android:id="@+id/txtObsVitimas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/perfil_input"
-                android:padding="8dp"
-                android:textColor="@color/cor_fonte"
-                android:textSize="16sp" />
+                style="@style/descritivo1" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -364,15 +264,7 @@
 
             <TextView
                 android:id="@+id/txtMeioAmbiente"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/perfil_input"
-                android:padding="8dp"
-                android:textColor="@color/cor_fonte"
-                android:textSize="16sp" />
+                style="@style/descritivo1" />
 
             <TextView
                 android:id="@+id/textView21"
@@ -382,15 +274,7 @@
 
             <TextView
                 android:id="@+id/txtDanosPropriedade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/perfil_input"
-                android:padding="8dp"
-                android:textColor="@color/cor_fonte"
-                android:textSize="16sp" />
+                style="@style/descritivo1" />
 
             <TextView
                 android:id="@+id/textView22"
@@ -400,15 +284,7 @@
 
             <TextView
                 android:id="@+id/txtCenario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/perfil_input"
-                android:padding="8dp"
-                android:textColor="@color/cor_fonte"
-                android:textSize="16sp" />
+                style="@style/descritivo1" />
 
             <TextView
                 android:id="@+id/textView23"
@@ -418,15 +294,7 @@
 
             <TextView
                 android:id="@+id/txtDesdobramento"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/perfil_input"
-                android:padding="8dp"
-                android:textColor="@color/cor_fonte"
-                android:textSize="16sp" />
+                style="@style/descritivo1" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -436,15 +304,7 @@
 
             <TextView
                 android:id="@+id/txtApoio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="2dp"
-                android:background="@drawable/perfil_input"
-                android:padding="8dp"
-                android:textColor="@color/cor_fonte"
-                android:textSize="16sp" />
+                style="@style/descritivo1" />
 
         </LinearLayout>
     </ScrollView>
