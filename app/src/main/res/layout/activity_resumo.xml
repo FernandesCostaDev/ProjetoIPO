@@ -342,7 +342,7 @@
                 android:id="@+id/textView25"
                 style="@style/textView2_resumo"
                 android:layout_marginTop="8dp"
-                android:text="Observação da Vítima" />
+                android:text="@string/label_obsVitima" />
 
             <TextView
                 android:id="@+id/txtObsVitimas"
@@ -360,7 +360,7 @@
                 android:id="@+id/textView20"
                 style="@style/textView2_resumo"
                 android:layout_marginTop="24dp"
-                android:text="Danos ao Meio Ambiente" />
+                android:text="@string/label_danosAmbiente" />
 
             <TextView
                 android:id="@+id/txtMeioAmbiente"
@@ -378,7 +378,7 @@
                 android:id="@+id/textView21"
                 style="@style/textView2_resumo"
                 android:layout_marginTop="24dp"
-                android:text="Danos a Propriedade" />
+                android:text="@string/label_danosPropriedade" />
 
             <TextView
                 android:id="@+id/txtDanosPropriedade"
@@ -396,7 +396,7 @@
                 android:id="@+id/textView22"
                 style="@style/textView2_resumo"
                 android:layout_marginTop="24dp"
-                android:text="Cenário" />
+                android:text="@string/label_cenario" />
 
             <TextView
                 android:id="@+id/txtCenario"
@@ -414,7 +414,7 @@
                 android:id="@+id/textView23"
                 style="@style/textView2_resumo"
                 android:layout_marginTop="24dp"
-                android:text="Desdobramento" />
+                android:text="@string/label_desdobramento" />
 
             <TextView
                 android:id="@+id/txtDesdobramento"
@@ -432,7 +432,7 @@
                 android:id="@+id/textView24"
                 style="@style/textView2_resumo"
                 android:layout_marginTop="24dp"
-                android:text="Apoio:" />
+                android:text="@string/label_apoio" />
 
             <TextView
                 android:id="@+id/txtApoio"
