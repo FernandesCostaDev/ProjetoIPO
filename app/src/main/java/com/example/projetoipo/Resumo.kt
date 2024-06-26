@@ -1,6 +1,7 @@
 package com.example.projetoipo
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
@@ -62,6 +63,7 @@ class Resumo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         binding = ActivityResumoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -296,7 +298,7 @@ class Resumo : AppCompatActivity() {
                 val outputStream: OutputStream? = resolver.openOutputStream(it)
                 pdfDocument.writeTo(outputStream)
                 outputStream?.close()
-                Toast.makeText(this, "Arquivo salvo na pasta de documentos.", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Arquivo salvo na pasta de documentos. \uD83D\uDE00", Toast.LENGTH_LONG)
                     .show()
 
                 //Abrir o arquivo salvo
@@ -307,7 +309,7 @@ class Resumo : AppCompatActivity() {
                 startActivity(intent)
 
             } catch (e: IOException) {
-                Toast.makeText(this, "Erro ao salvar o arquivo.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Erro ao salvar o arquivo. \uD83D\uDE21", Toast.LENGTH_LONG).show()
             }
         }
         pdfDocument.close()
@@ -337,8 +339,6 @@ class Resumo : AppCompatActivity() {
         staticLayout.draw(this, x, y)
     }
 }
-
-
 
 private fun StaticLayout.draw(canvas: Canvas, x: Float, y: Float) {
     canvas.withTranslation(x, y) {

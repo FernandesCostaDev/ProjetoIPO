@@ -11,7 +11,7 @@
     <string name="btn_adicionar">adicionar</string>
     <string name="btn_excluir">Excluir</string>
     <string name="btn_pdf">Gerar PDF</string>
-    <string name="btn_avancar">Avançar</string>
+    <string name="btn_proximo">Próximo</string>
     <string name="btn_cadastrar">Cadastrar</string>
 
     <string name="label_data">Data:</string>
@@ -55,7 +55,7 @@
     <string name="msg_apoio"><u>Órgãos de Apoio</u></string>
     <string name="msg_contexto"><u>Contextualização</u></string>
     <string name="msg_adicionarApoio">Deseja adicionar um orgão de apoio?</string>
-    <string name="msg_vitimas">Danos à pessoas</string>
+    <string name="msg_vitimas"><u>Danos à pessoas</u></string>
 
     <string name="calendar_description">Botão de calendário</string>
     <string name="time_picker_description">Botão de relógio</string>
@@ -78,5 +78,40 @@
     <string name="label_danosPropriedade">Danos a Propriedade</string>
     <string name="label_danosAmbiente">Danos ao Meio Ambiente</string>
     <string name="label_obsVitima">Observação da Vítima</string>
+    <string name="label_foto">Capturar foto do local</string>
+    <string name="label_aeronautica">Aeronáutica</string>
+    <string name="label_bombeiroPrivado">Bombeiro Privado</string>
+    <string name="label_ciaAgua">CIA de Água e Esgoto</string>
+    <string name="label_BpmoaPmpr">BPMOA/PMPR</string>
+    <string name="label_CiaEnergia">CIA de Energia Elétrica</string>
+    <string name="label_CbOutroEstado">CB de Outro Estado</string>
+    <string name="label_DefesaCivil">Defesa Civil (Casa Militar)</string>
+    <string name="label_DefesaCivilCompdec">Defesa Civil (COMPDEC)</string>
+    <string name="label_ConcessionariaRodovia">Concessionária da Rodovia</string>
+    <string name="label_crea">CREA</string>
+    <string name="label_DerDnit">DER/DNIT</string>
+    <string name="label_exercito">Exército</string>
+    <string name="label_FiscalizacaoMunicipal">Fiscalização de Trânsito Municipal</string>
+    <string name="label_GuardaMunicipal">Guarda Municipal</string>
+    <string name="label_GuardaPortuaria">Guarda Portuária</string>
+    <string name="label_iap">IAP</string>
+    <string name="label_ibama">IBAMA</string>
+    <string name="label_iml">IML</string>
+    <string name="label_instituicaoPrivada">Instituição Privada</string>
+    <string name="label_InstituicaoPublica">Instituição Pública</string>
+    <string name="label_marinha">Marinha</string>
+    <string name="label_pmpr">PMPR</string>
+    <string name="label_policiaCientifica">Polícia Científica Paraná</string>
+    <string name="label_polIciaCivil">Polícia Civil</string>
+    <string name="label_policiaFederal">Polícia Federal</string>
+    <string name="label_policiaFlorestal">Polícia Florestal</string>
+    <string name="label_policiaMilitarOutroEstado">Polícia Militar de Outro Estado</string>
+    <string name="label_policiaRodoviariaFederal">Polícia Rodoviária Federal</string>
+    <string name="label_receitaEstadual">Receita Estadual</string>
+    <string name="label_vigilinciaSanitaria">Vigilância Sanitária Municipal</string>
+    <string name="label_vigilinciaSanitariaEstadual">Vigilância Sanitária Estadual</string>
+    <string name="label_policiaRodoviariaEstadual">Polícia Rodoviária Estadual</string>
+    <string name="label_prefeituraMunicipal">Prefeitura Municipal</string>
+    <string name="label_samu">SAMU</string>
 
 </resources>

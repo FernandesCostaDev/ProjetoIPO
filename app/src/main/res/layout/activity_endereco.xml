@@ -28,71 +28,73 @@
 
     <AutoCompleteTextView
         android:id="@+id/autoCidades"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:completionThreshold="1"
+        style="@style/autoComplete"
         android:hint="@string/label_cidade"
-        android:textColor="@color/cor_fonte"
-        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider1"
         tools:ignore="LabelFor" />
 
     <AutoCompleteTextView
         android:id="@+id/autoLogradouro"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        style="@style/autoComplete"
         android:hint="@string/label_logradouro"
-        android:inputType="text"
-        android:textColor="@color/cor_fonte"
-        android:textAllCaps="true"
-        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autoCidades"
         tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/edt_bairro"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        style="@style/autoComplete"
         android:hint="@string/label_bairro"
-        android:inputType="text|textAutoComplete"
-        android:textAllCaps="true"
-        android:textColor="@color/cor_fonte"
-        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autoLogradouro"
         tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/edt_complemento"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        style="@style/autoComplete"
         android:hint="@string/label_complemento"
-        android:inputType="text|textAutoComplete"
-        android:textAllCaps="true"
-        android:textSize="16sp"
-        android:textColor="@color/cor_fonte"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_bairro"
         tools:ignore="Autofill" />
 
+    <TextView
+        android:id="@+id/textView26"
+        style="@style/textView_geral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/label_foto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_complemento" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_camara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/calendar_description"
+        android:src="@drawable/baseline_photo_camera_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <ImageView
+        android:id="@+id/img_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camara" />
 
     <Button
         android:id="@+id/btn_avancar"
         style="@style/btn_principal"
-        android:layout_marginTop="32dp"
-        android:text="@string/btn_avancar"
+        android:text="@string/btn_proximo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_complemento" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

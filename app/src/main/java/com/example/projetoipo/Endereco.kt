@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetoipo.databinding.ActivityEnderecoBinding
 
@@ -39,6 +40,12 @@ class Endereco : AppCompatActivity() {
         binding.autoLogradouro.addTextChangedListener(autoCompleteTextWatcher)
         binding.edtBairro.addTextChangedListener(autoCompleteTextWatcher)
 
+
+        binding.btnCamara.setOnClickListener {
+            Toast.makeText(this, "Esta função ainda não está pronta. \uD83D\uDE14", Toast.LENGTH_SHORT).show()
+        }
+
+
         binding.btnAvancar.setOnClickListener {
 
             val cidade = binding.autoCidades.text.toString()
@@ -47,7 +54,6 @@ class Endereco : AppCompatActivity() {
             val complemento = binding.edtComplemento.text.toString()
 
             val intent = Intent(this, Recursos::class.java)
-
             intent.putExtra("graduacaoNome", retornoGraduacaoNome)
             intent.putExtra("crbm", retornoCrbm)
             intent.putExtra("obm", retornoObm)
@@ -55,7 +61,6 @@ class Endereco : AppCompatActivity() {
             intent.putExtra("hora", retornoHora)
             intent.putExtra("natureza", retornoNatureza)
             intent.putExtra("subNatureza", retornoSubNatureza)
-
             intent.putExtra("cidade", cidade)
             intent.putExtra("logradouro", logradouro)
             intent.putExtra("bairro", bairro)

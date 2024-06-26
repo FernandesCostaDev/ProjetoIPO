@@ -1,5 +1,6 @@
 package com.example.projetoipo
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.navigation.NavigationView
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         Thread.sleep(1000)
         installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)

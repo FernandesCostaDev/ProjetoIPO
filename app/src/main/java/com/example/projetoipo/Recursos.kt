@@ -242,7 +242,7 @@ class Recursos : AppCompatActivity(), OnListClickListener2 {
                     )
                 )
                 runOnUiThread {
-                    Toast.makeText(this, "Viatura cadastrada com sucesso!", Toast.LENGTH_SHORT)
+                    Toast.makeText(this, "Viatura cadastrada com sucesso! \uD83D\uDE92", Toast.LENGTH_SHORT)
                         .show()
                     lista.add(Viaturas(cod = cod, prefixo = prefixo))
                     adapter1.notifyItemInserted(lista.size)

@@ -25,100 +25,56 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="400"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView1">
+            style="@style/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"
+            tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtDanosMeioAmbiente"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
+               style="@style/textInputEditText"
                 android:hint="Danos ao Meio Ambiente:"
-                android:inputType="textMultiLine"
                 android:maxLength="401"
                 android:minHeight="150dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="400"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+            style="@style/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+            tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtDanosPropriedade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
+                style="@style/textInputEditText"
                 android:hint="Danos à Propriedade:"
-                android:inputType="textMultiLine"
                 android:maxLength="401"
                 android:minHeight="150dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="400"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+            style="@style/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtCenario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
+                style="@style/textInputEditText"
                 android:hint="Cenário:"
-                android:inputType="textMultiLine"
                 android:maxLength="401"
                 android:minHeight="150dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:counterEnabled="true"
-            app:counterMaxLength="400"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+            style="@style/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+            tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtDesdobramento"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
+                style="@style/textInputEditText"
                 android:hint="Desdobramento:"
-                android:inputType="textMultiLine"
                 android:maxLength="401"
                 android:minHeight="150dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -128,7 +84,7 @@
             style="@style/btn_principal"
             android:layout_marginTop="24dp"
             android:enabled="true"
-            android:text="@string/btn_avancar"
+            android:text="@string/btn_proximo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

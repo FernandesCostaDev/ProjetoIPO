@@ -116,7 +116,7 @@ class CadUsuario : Fragment() {
                     )
                 )
                 requireActivity().runOnUiThread {
-                    Toast.makeText(requireContext(), "Usuário salvo com sucesso!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Bombeiro salvo com sucesso! \uD83E\uDDD1\u200D\uD83D\uDE92", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(requireContext(), MainActivity::class.java)
                     startActivity(intent)

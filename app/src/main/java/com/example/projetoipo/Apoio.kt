@@ -1,6 +1,7 @@
 package com.example.projetoipo
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -47,7 +48,7 @@ class Apoio : AppCompatActivity() {
 
         val checkBoxes = listOf(
             binding.ckBox1, binding.ckBox2, binding.ckBox3, binding.ckBox4, binding.ckBox5,
-            binding.ckBox6, binding.ckBox7, binding.ckBox8, binding.ckBox9, binding.ckBox10,
+            binding.ckBox6, binding.ckBox7, binding.ckBox8, binding.ckBox10,
             binding.ckBox11, binding.ckBox12, binding.ckBox13, binding.ckBox14, binding.ckBox15,
             binding.ckBox16, binding.ckBox17, binding.ckBox18, binding.ckBox19, binding.ckBox20,
             binding.ckBox21, binding.ckBox22, binding.ckBox23, binding.ckBox24, binding.ckBox25,

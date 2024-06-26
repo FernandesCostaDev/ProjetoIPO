@@ -2,6 +2,7 @@ package com.example.projetoipo
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ class Descritivo : AppCompatActivity() {
     private lateinit var binding: ActivityDescritivoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         binding = ActivityDescritivoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
