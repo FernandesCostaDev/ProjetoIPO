@@ -68,6 +68,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout4"
             style="@style/textInputLayout"
+            app:counterMaxLength="800"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
             tools:ignore="MissingConstraints">
 
@@ -75,7 +76,7 @@
                 android:id="@+id/edtDesdobramento"
                 style="@style/textInputEditText"
                 android:hint="Desdobramento:"
-                android:maxLength="401"
+                android:maxLength="801"
                 android:minHeight="150dp" />
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -3,6 +3,8 @@ package com.example.projetoipo
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projetoipo.databinding.ActivityApoioBinding
@@ -73,6 +75,8 @@ class Apoio : AppCompatActivity() {
             }
         }
 
+        binding.txtApoio.addTextChangedListener(autoCompleteTextWatcher)
+
         binding.btnAvancar.setOnClickListener {
 
             val intent = Intent(this, Resumo::class.java)
@@ -112,6 +116,18 @@ class Apoio : AppCompatActivity() {
     private fun updateTextView() {
         selecaoApoio = selectedValues.joinToString(", ")
         binding.txtApoio.text = selectedValues.joinToString(", ")
+    }
+
+    private val autoCompleteTextWatcher = object: TextWatcher {
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        }
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            binding.btnAvancar.isEnabled = selecaoApoio.isNotEmpty()
+        }
+
+        override fun afterTextChanged(s: Editable?) {
+        }
     }
 }
 
